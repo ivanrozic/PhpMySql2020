@@ -1,5 +1,6 @@
 <?php
 require_once '../connection/mysqli_conn.php';
+//include '../autoload.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,13 +17,13 @@ and open the template in the editor.
     <body>
         <?php
 // Perform some queries
-        $query = "SELECT stud.mbrStud,imeStud, prezStud from stud LIMIT 10";
-        $result = $mysqli->query($query);
+        $sql = "SELECT stud.mbrStud,imeStud, prezStud from stud LIMIT 10";
+        $result = $mysqli->query($sql);
         ?>
 
         <div>Ovo su podaci o bazi:<br>
             <p>
-                Query: <code><?= $query ?></code>
+                Query: <code><?= $sql ?></code>
             </p>
             <p>
                 Broj selektiranih stupaca: <code><?= $mysqli->field_count ?></code>
@@ -33,7 +34,7 @@ and open the template in the editor.
             <p>
                 Ispis:<br>
                 <?php
-                if ($result = $mysqli->query($query)) {
+                if ($result = $mysqli->query($sql)) {
                     while ($obj = $result->fetch_object()) {
                         printf("<b>%d</b> %s, %s <br>", $obj->mbrStud, $obj->prezStud, $obj->imeStud);
                     }
