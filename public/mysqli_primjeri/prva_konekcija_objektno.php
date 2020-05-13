@@ -37,6 +37,7 @@ and open the template in the editor.
                 if ($result = $mysqli->query($sql)) {
                     while ($obj = $result->fetch_object()) {
                         printf("<b>%d</b> %s, %s <br>", $obj->mbrStud, $obj->prezStud, $obj->imeStud);
+                       // var_dump($obj);
                     }
                     
                     $result->data_seek(0);  // vrati pointer na pocetak

@@ -16,6 +16,7 @@ and open the template in the editor.
         <?php
         $stmt = $pdo->query("SELECT stud.mbrStud,imeStud, prezStud from stud LIMIT 10");
 while ($row = $stmt->fetch()) {
+    //var_dump($row);
     echo $row['imeStud']."<br />\n";
 }
         ?>
