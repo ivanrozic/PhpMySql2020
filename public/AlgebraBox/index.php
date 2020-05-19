@@ -5,7 +5,7 @@
 	{
 		protected function GetContent()
 		{
-			$output = '';
+			$output = '<span>pmrvic@789.com 1234</span><br>';
 			
 			$output .= '<h1>Dobrodošli u AlgebraBox</h1>';
 			$output .= '<p>Pohranite svoje datoteke kod nas.</p>';
