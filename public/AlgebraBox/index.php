@@ -15,7 +15,7 @@
 		
 		protected function PageRequiresAuthenticUser()
 		{
-			return false;
+			return false; // jedino na ovu stanicu ne moram biti registriran
 		}
 	}
 
